@@ -2,12 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary</title>
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <h1>page page page
-        
-    </h1>
+    <!-- Header -->
+    <header>
+        <h1>Primary Activity</h1>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner" style="background-image: url('images/children-large.jpg');">
+        <!-- Use a smaller image -->
+        <picture>
+            <source srcset="images/children-medium.jpg" media="(max-width: 768px)">
+            <img src="images/children-large.jpg" alt="Banner Image">
+        </picture>
+    </div>
+    <div class="cards-container">
+        <div class="card">
+            <img src="images/spiritual-goals.jpg" alt="Image 1">
+            <h3>Spiritual Goal</h3>
+            <p>Card description goes here.</p>
+        </div>
+        <div class="card">
+            <img src="images/social-goals.jpg" alt="Image 2">
+            <h3>Social Goal</h3>
+            <p>Card description goes here.</p>
+        </div>
+        <div class="card">
+            <img src="images/physical-goals.jpg" alt="Image 3">
+            <h3>Physical Goal</h3>
+            <p>Card description goes here.</p>
+        </div>
+        <div class="card">
+            <img src="images/intellectual-goals.jpg" alt="Image 4">
+            <h3>Intellectual Goal</h3>
+            <p>Card description goes here.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
