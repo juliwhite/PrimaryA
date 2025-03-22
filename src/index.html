@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primary</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/activity.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -21,27 +22,37 @@
         </picture>
     </div>
     <div class="cards-container">
-        <div class="card">
+        <div class="card" data-category="spiritual goal">
+            <a href="category.html?category=spiritual goal">
             <img src="images/spiritual-goals.jpg" alt="Image 1">
             <h3>Spiritual Goal</h3>
-            <p>Card description goes here.</p>
+            <p>Click to view activities.</p>
+        </a>
         </div>
-        <div class="card">
+        <div class="card" data-category="social goals">
+            <a href="category.html?category=social goals">
             <img src="images/social-goals.jpg" alt="Image 2">
             <h3>Social Goal</h3>
-            <p>Card description goes here.</p>
+            <p>Click to view activities.</p>
+        </a>
         </div>
-        <div class="card">
+        <div class="card" data-category="physical goal">
+            <a href="category.html?category=physical goal">
             <img src="images/physical-goals.jpg" alt="Image 3">
             <h3>Physical Goal</h3>
-            <p>Card description goes here.</p>
+            <p>Click to view activities.</p>
+        </a>
         </div>
-        <div class="card">
+        <div class="card" data-category="intellectual goal">
+            <a href="category.html?category=intellectual goal">
             <img src="images/intellectual-goals.jpg" alt="Image 4">
             <h3>Intellectual Goal</h3>
-            <p>Card description goes here.</p>
+            <p>Click to view activities.</p>
+        </a>
         </div>
     </div>
+
+    <div id="activities-container"></div>
 
     <!-- Footer -->
     <footer>
