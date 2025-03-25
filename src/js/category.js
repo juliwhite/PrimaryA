@@ -1,6 +1,8 @@
 import { fetchActivities } from "./util.js"; 
+import { loadHeaderFooter } from "./template.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
+    await loadHeaderFooter();
     const activitiesContainer = document.getElementById("activities-container");
 
     // Get the category from the URL query parameters

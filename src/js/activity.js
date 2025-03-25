@@ -1,6 +1,9 @@
 import { fetchActivities } from "./util.js";
+import { loadHeaderFooter } from "./template.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadHeaderFooter();
+
     const cards = document.querySelectorAll(".card");
     const activitiesContainer = document.createElement("div");
     activitiesContainer.id = "activities-container";
@@ -24,6 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Display activities in the container
     function displayActivities(activities) {
         activitiesContainer.innerHTML = ""; // Clear previous activities
+        if (activities.length === 0) {
+            activitiesContainer.innerHTML = "<p>No activities found.</p>";
+            return;
+        }
+        
         activities.forEach(activity => {
             const activityElement = document.createElement("div");
             activityElement.classList.add("activity");

@@ -42,14 +42,14 @@ header h1 {
 }
 
 header nav {
-    margin-left: auto; /* Push the navigation to the right */
+    margin-right: auto; /* Push the navigation to the right */
 }
 
 header nav a {
     text-decoration: none;
     color: #4b412d;
     font-size: 1rem;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 header nav a:hover {
