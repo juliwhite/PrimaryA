@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Activity</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/add-activity.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header"></header>
+
+    <main>
+        <h1>Add a New Activity</h1>
+        <form id="add-activity-form">
+            <label for="activity-name">Activity Name:</label>
+            <input type="text" id="activity-name" name="activity-name" required>
+            
+            <label for="activity-description">Description:</label>
+            <textarea id="activity-description" name="activity-description" required></textarea>
+            
+            <label for="activity-category">Category:</label>
+            <select id="activity-category" name="activity-category" required>
+                <option value="spiritual goal">Spiritual Goal</option>
+                <option value="social goals">Social Goals</option>
+                <option value="physical goal">Physical Goal</option>
+                <option value="intellectual goal">Intellectual Goal</option>
+            </select>
+            
+            <button type="submit">Add Activity</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer"></footer>
+</body>
+</html>

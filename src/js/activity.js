@@ -1,5 +1,7 @@
 import { fetchActivities } from "./util.js";
 import { loadHeaderFooter } from "./template.js";
+//import { login } from "./auth.mjs";
+
 
 document.addEventListener("DOMContentLoaded", async () => {
     await loadHeaderFooter();
@@ -41,7 +43,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <p><strong>Description:</strong> ${activity.description}</p>
                 <p><strong>Location:</strong> ${activity.location}</p>
                 <p><strong>Organizer:</strong> ${activity.organizer}</p>
-                <p><strong>Status:</strong> ${activity.status}</p>
             `;
             activitiesContainer.appendChild(activityElement);
         });
@@ -56,4 +57,31 @@ document.addEventListener("DOMContentLoaded", async () => {
             displayActivities(filteredActivities);
         });
     });
+
+    // Add event listener for the "Add More Activities" button
+    const addActivityBtn = document.getElementById("add-activity-btn");
+    if (addActivityBtn) {
+        addActivityBtn.addEventListener("click", () => {
+            location.href = "login.html"; // Redirect to the login page
+        });
+    }
+
+
+
+    // const loginForm = document.getElementById("login-form");
+
+    // loginForm.addEventListener("submit", async (e) => {
+    //     e.preventDefault();
+
+    //     const username = document.getElementById("username").value;
+    //     const password = document.getElementById("password").value;
+
+    //     const success = await login(username, password);
+    //     if (success) {
+    //         alert("Login successful!");
+    //         location.href = "add-activity.html"; // Redirect to the add-activity page
+    //     } else {
+    //         alert("Invalid credentials. Please try again.");
+    //     }
+    // });
 });
