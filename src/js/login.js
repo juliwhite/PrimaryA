@@ -1,8 +1,8 @@
 import { login } from './auth.mjs';
 import { loadHeaderFooter } from "./template.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadHeaderFooter();
+document.addEventListener('DOMContentLoaded', async() => {
+    await loadHeaderFooter();
     
     const loginForm = document.getElementById('login-form');
 

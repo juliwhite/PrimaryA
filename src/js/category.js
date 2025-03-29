@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <p><strong>Description:</strong> ${activity.description}</p>
                 <p><strong>Location:</strong> ${activity.location}</p>
                 <p><strong>Organizer:</strong> ${activity.organizer}</p>
-                <p><strong>Status:</strong> ${activity.status}</p>
             `;
             activitiesContainer.appendChild(activityElement);
         });
