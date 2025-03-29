@@ -12,10 +12,22 @@
     <header id="main-header"></header>
 
     <main>
-        <h1>Add a New Activity</h1>
-        <form id="add-activity-form">
+        <h1 class="activity-title">Add a New Activity</h1>
+        <form id="add-activity-form" class="form1">
+        <fieldset>
+            <legend>Add Activity</legend>
+        
             <label for="activity-name">Activity Name:</label>
             <input type="text" id="activity-name" name="activity-name" required>
+
+            <label for="activity-date">Date:</label>
+            <input type="date" id="activity-date" name="activity-date" required>
+
+            <label for="activity-location">Location:</label>
+            <input type="text" id="activity-location" name="activity-location" required>
+        
+            <label for="activity-organizer">Organizer:</label>
+            <input type="text" id="activity-organizer" name="activity-organizer" required>
             
             <label for="activity-description">Description:</label>
             <textarea id="activity-description" name="activity-description" required></textarea>
@@ -27,9 +39,10 @@
                 <option value="physical goal">Physical Goal</option>
                 <option value="intellectual goal">Intellectual Goal</option>
             </select>
-            
-            <button type="submit">Add Activity</button>
+        </fieldset>
+            <input type="submit" value="Add Activity">
         </form>
+    
     </main>
 
     <!-- Footer -->
