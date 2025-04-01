@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     await checkLogin(); // Ensure the user is logged in
 
-    // Your page-specific logic here
     const addActivityForm = document.getElementById("add-activity-form");
 
     addActivityForm.addEventListener("submit", async (e) => {
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         console.log("New Activity:", newActivity);
 
-        // Send the data to the backend API (replace with your API endpoint)
+        // Send the data to the backend API 
         try {
             //const response = await fetch("https://primaryactivities-backend.onrender.com/api/activities", {
             const response = await fetch(ACTIVITIES_URL, {

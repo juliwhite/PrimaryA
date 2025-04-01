@@ -1,27 +1,3 @@
-/*export async function loadTemplate(selector, file) {
-    const element = document.querySelector(selector);
-    if (element) {
-        try {
-            //const response = await fetch(file);
-            // Fetch the template from the public/partials folder
-            const response = await fetch(`/partials/${file}`);
-            if (!response.ok) {
-                throw new Error(`Failed to load ${file}: ${response.statusText}`);
-            }
-            const content = await response.text();
-            element.innerHTML = content;
-        } catch (error) {
-            console.error(error);
-        }
-    }
-}
-
-// Load the header and footer templates
-document.addEventListener("DOMContentLoaded", () => {
-    loadTemplate("header", "header.html");
-    loadTemplate("footer", "footer.html");
-});*/
-
 // Fetches the content of a template file
 async function loadTemplate(file) {
     try {
