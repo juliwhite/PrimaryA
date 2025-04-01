@@ -1,6 +1,9 @@
 import { checkLogin } from "./auth.mjs";
 import { loadHeaderFooter } from "./template.js";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const ACTIVITIES_URL = `${API_BASE_URL}/api/activities`;
+
 document.addEventListener("DOMContentLoaded", async () => {
     await loadHeaderFooter();
 
@@ -34,7 +37,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Send the data to the backend API (replace with your API endpoint)
         try {
-            const response = await fetch("https://primaryactivities-backend.onrender.com/api/activities", {
+            //const response = await fetch("https://primaryactivities-backend.onrender.com/api/activities", {
+            const response = await fetch(ACTIVITIES_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

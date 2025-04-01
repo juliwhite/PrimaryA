@@ -1,6 +1,11 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig({
+export default defineConfig(({ mode }) =>{
+
+  // Load environment variables
+  const env = loadEnv(mode, process.cwd());
+
+  return {
   root: 'src',
   build: {
     outDir: '../dist',
@@ -15,4 +20,8 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  define: {
+    'import.meta.env.VITE_API_BASE_URL': JSON.stringify(env.VITE_API_BASE_URL),
+  },
+}
 });

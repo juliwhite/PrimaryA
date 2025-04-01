@@ -1,5 +1,7 @@
-// Simulated backend API URL 
-const API_URL = "https://primaryactivities-backend.onrender.com/api/auth";
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_URL = `${API_BASE_URL}/api/auth`;
+
 
 // Function to log in the user
 export async function login(username, password) {
