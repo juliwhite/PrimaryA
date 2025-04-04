@@ -313,3 +313,16 @@ a {
 .form1 input:required:valid {
     border-right: solid 8px green;
 }
+
+#form-message {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: green; /* Default color for success */
+    background-color: rgb(189, 236, 189);
+}
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+}
