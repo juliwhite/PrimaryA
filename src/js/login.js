@@ -5,6 +5,18 @@ document.addEventListener('DOMContentLoaded', async() => {
     await loadHeaderFooter();
     
     const loginForm = document.getElementById('login-form');
+    const closeBtn = document.getElementById('close-login-modal');
+    const loginModal = document.getElementById('login-modal');
+
+    // Close modal and redirect to main page
+    if (closeBtn && loginModal) {
+        closeBtn.addEventListener('click', () => {
+            loginModal.style.display = 'none';
+
+        // Redirect to main page
+        window.location.href = 'index.html';
+        });
+    }
 
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
